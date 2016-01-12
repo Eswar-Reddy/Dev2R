@@ -9,7 +9,23 @@
         <enabled>false</enabled>
     </classAccesses>
     <classAccesses>
+        <apexClass>NewCusomClass</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>NewWelcome</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>NewYearMsg</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
         <apexClass>Sample</apexClass>
+        <enabled>false</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>Welcome</apexClass>
         <enabled>false</enabled>
     </classAccesses>
     <custom>false</custom>
@@ -874,6 +890,16 @@
         <readable>false</readable>
     </fieldPermissions>
     <fieldPermissions>
+        <editable>false</editable>
+        <field>MyCustomObject1__c.CustomField1__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>false</editable>
+        <field>MyCustomObject1__c.TestNewFieldRevert__c</field>
+        <readable>false</readable>
+    </fieldPermissions>
+    <fieldPermissions>
         <editable>true</editable>
         <field>Opportunity.AccountId</field>
         <readable>true</readable>
@@ -1220,6 +1246,15 @@
         <layout>Macro-Macro Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
+        <layout>MyCustomObject1__c-MyCustomObject1 Object Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MyCustomObject3__c-MyCustomObject3 Object Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
+        <layout>MyCustomObject4__c-MyCustomObject4Object Layout</layout>
+    </layoutAssignments>
+    <layoutAssignments>
         <layout>Opportunity-Opportunity Layout</layout>
     </layoutAssignments>
     <layoutAssignments>
@@ -1260,9 +1295,6 @@
     </layoutAssignments>
     <layoutAssignments>
         <layout>UserProvisioningRequest-User Provisioning Request Layout</layout>
-    </layoutAssignments>
-    <layoutAssignments>
-        <layout>student__c-student Layout</layout>
     </layoutAssignments>
     <recordTypeVisibilities>
         <default>false</default>
