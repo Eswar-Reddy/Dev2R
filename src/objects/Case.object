@@ -60,6 +60,31 @@
         <actionName>View</actionName>
         <type>Default</type>
     </actionOverrides>
+    <businessProcesses>
+        <fullName>CaseSupportProcessTest1</fullName>
+        <description>Testing purpose created a Support Process</description>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Escalated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>SupportTest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Working</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>true</enableFeeds>
     <fields>
@@ -75,6 +100,19 @@
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AutorabitExtId__c</fullName>
+        <description>External Id created by AutoRABIT</description>
+        <externalId>true</externalId>
+        <label>AutorabitExtId__c</label>
+        <length>18</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <fields>
         <fullName>BusinessHoursId</fullName>
@@ -146,21 +184,6 @@
     </fields>
     <fields>
         <fullName>Origin</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Phone</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Web</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -184,39 +207,29 @@
         <fullName>PotentialLiability__c</fullName>
         <externalId>false</externalId>
         <label>Potential Liability</label>
-        <picklist>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Priority</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>High</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Medium</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Low</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>true</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -226,90 +239,64 @@
         <fullName>Product__c</fullName>
         <externalId>false</externalId>
         <label>Product</label>
-        <picklist>
-            <picklistValues>
-                <fullName>GC1040</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC1060</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC3020</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC3040</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC3060</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC5020</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC5040</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC5060</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>GC1020</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>GC1040</fullName>
+                    <default>false</default>
+                    <label>GC1040</label>
+                </value>
+                <value>
+                    <fullName>GC1060</fullName>
+                    <default>false</default>
+                    <label>GC1060</label>
+                </value>
+                <value>
+                    <fullName>GC3020</fullName>
+                    <default>false</default>
+                    <label>GC3020</label>
+                </value>
+                <value>
+                    <fullName>GC3040</fullName>
+                    <default>false</default>
+                    <label>GC3040</label>
+                </value>
+                <value>
+                    <fullName>GC3060</fullName>
+                    <default>false</default>
+                    <label>GC3060</label>
+                </value>
+                <value>
+                    <fullName>GC5020</fullName>
+                    <default>false</default>
+                    <label>GC5020</label>
+                </value>
+                <value>
+                    <fullName>GC5040</fullName>
+                    <default>false</default>
+                    <label>GC5040</label>
+                </value>
+                <value>
+                    <fullName>GC5060</fullName>
+                    <default>false</default>
+                    <label>GC5060</label>
+                </value>
+                <value>
+                    <fullName>GC1020</fullName>
+                    <default>false</default>
+                    <label>GC1020</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
     </fields>
     <fields>
         <fullName>Reason</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Installation</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equipment Complexity</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Performance</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Breakdown</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Equipment Design</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Feedback</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <cssExposed>false</cssExposed>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -319,47 +306,36 @@
         <fullName>SLAViolation__c</fullName>
         <externalId>false</externalId>
         <label>SLA Violation</label>
-        <picklist>
-            <picklistValues>
-                <fullName>No</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Yes</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
+        <required>false</required>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>false</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>No</fullName>
+                    <default>false</default>
+                    <label>No</label>
+                </value>
+                <value>
+                    <fullName>Yes</fullName>
+                    <default>false</default>
+                    <label>Yes</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SourceId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>New</fullName>
-                <closed>false</closed>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Working</fullName>
-                <closed>false</closed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Escalated</fullName>
-                <closed>false</closed>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Closed</fullName>
-                <closed>true</closed>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
@@ -389,33 +365,22 @@
     </fields>
     <fields>
         <fullName>Type</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Mechanical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Electrical</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Electronic</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Structural</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackFeedHistory>false</trackFeedHistory>
         <trackHistory>true</trackHistory>
         <trackTrending>false</trackTrending>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>UAT_fields__c</fullName>
+        <externalId>false</externalId>
+        <label>UAT fields</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
     </fields>
     <listViews>
         <fullName>AllClosedCases</fullName>

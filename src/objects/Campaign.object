@@ -50,6 +50,7 @@
     </actionOverrides>
     <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
     <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
     <fields>
         <fullName>ActualCost</fullName>
     </fields>
@@ -61,6 +62,10 @@
     </fields>
     <fields>
         <fullName>BudgetedCost</fullName>
+    </fields>
+    <fields>
+        <fullName>CampaignImageId</fullName>
+        <type>Lookup</type>
     </fields>
     <fields>
         <fullName>CampaignMemberRecordTypeId</fullName>
@@ -154,80 +159,10 @@
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Planned</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>In Progress</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Completed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Aborted</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <type>Picklist</type>
     </fields>
     <fields>
         <fullName>Type</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Conference</fullName>
-                <default>true</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Webinar</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Trade Show</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Public Relations</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Partners</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Referral Program</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Advertisement</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Banner Ads</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Direct Mail</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Email</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Telemarketing</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Other</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <type>Picklist</type>
     </fields>
     <listViews>
@@ -257,6 +192,12 @@
         <lookupDialogsAdditionalFields>CAMPAIGN.NAME</lookupDialogsAdditionalFields>
         <lookupPhoneDialogsAdditionalFields>CAMPAIGN.NAME</lookupPhoneDialogsAdditionalFields>
         <searchResultsAdditionalFields>CAMPAIGN.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>PARENT_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.CAMPAIGN_TYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.START_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.END_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CAMPAIGN.NUM_RESPONSES</searchResultsAdditionalFields>
         <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
     </searchLayouts>
     <sharingModel>FullAccess</sharingModel>

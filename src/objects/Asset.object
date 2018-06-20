@@ -40,6 +40,20 @@
         <type>Lookup</type>
     </fields>
     <fields>
+        <fullName>AssetLevel</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
+        <fullName>AssetProvidedById</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>AssetServicedById</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>ContactId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
@@ -57,11 +71,20 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>IsInternal</fullName>
+        <trackHistory>false</trackHistory>
+    </fields>
+    <fields>
         <fullName>Name</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>OwnerId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId</fullName>
         <trackHistory>false</trackHistory>
         <type>Lookup</type>
     </fields>
@@ -82,13 +105,6 @@
     </fields>
     <fields>
         <fullName>ProductFamily</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>None</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <type>Picklist</type>
     </fields>
     <fields>
@@ -100,36 +116,21 @@
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
+        <fullName>RootAssetId</fullName>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
         <fullName>SerialNumber</fullName>
         <trackHistory>false</trackHistory>
     </fields>
     <fields>
         <fullName>Status</fullName>
-        <picklist>
-            <picklistValues>
-                <fullName>Shipped</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Installed</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Registered</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Obsolete</fullName>
-                <default>false</default>
-            </picklistValues>
-            <picklistValues>
-                <fullName>Purchased</fullName>
-                <default>false</default>
-            </picklistValues>
-            <sorted>false</sorted>
-        </picklist>
         <trackHistory>false</trackHistory>
         <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StockKeepingUnit</fullName>
     </fields>
     <fields>
         <fullName>UsageEndDate</fullName>
